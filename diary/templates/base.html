@@ -36,8 +36,18 @@
                         <li class="nav-item"><a href="{% url 'diary:inquiry' %}" class="nav-link{% block active_inquiry %}{% endblock %}">INQUIRY</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="#" class="nav-link">Sign Up</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="{% url 'account_logout' %}" class="nav-link">Log Out</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'account_signup' %}" class="nav-link {% block active_signup %}{% endblock %}">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'account_login' %}" class="nav-link {% block active_login %}{% endblock %}">Log In</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </dev>

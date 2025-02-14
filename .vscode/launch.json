@@ -18,6 +18,36 @@
                 "DB_PASSWORD":"Kusk3924",
                 "DJANGO_SETTINGS_MODULE":"diary_app.settings_dev"
             }
-        }
+        },
+        {
+            "name": "makemigrations",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "makemigrations"
+            ],
+            "django": true,
+            "env":{
+                "DB_USER":"postgres",
+                "DB_PASSWORD":"Kusk3924",
+                "DJANGO_SETTINGS_MODULE":"diary_app.settings_dev"
+            }
+        },
+        {
+            "name": "migrate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "migrate"
+            ],
+            "django": true,
+            "env":{
+                "DB_USER":"postgres",
+                "DB_PASSWORD":"Kusk3924",
+                "DJANGO_SETTINGS_MODULE":"diary_app.settings_dev"
+            }
+        },
     ]
 }
