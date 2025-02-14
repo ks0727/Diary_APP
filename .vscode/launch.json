@@ -15,7 +15,8 @@
             "django": true,
             "env":{
                 "DB_USER":"postgres",
-                "DB_PASSWORD":"Kusk3924"
+                "DB_PASSWORD":"Kusk3924",
+                "DJANGO_SETTINGS_MODULE":"diary_app.settings_dev"
             }
         }
     ]
