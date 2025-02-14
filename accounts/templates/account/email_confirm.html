@@ -3,14 +3,14 @@
 
 {% block active_login %}active{% endblock %}
 
-{% blocj contents %}
+{% block contents %}
 <div class="container">
     <div class="row">
         <div class="my-div-style">
             <h1>ユーザ登録</h1>
             {% if confirmation %}
             <p>ユーザ登録を確定するには、以下のボタンを押してください。</p>
-            <form action="{% url 'account_confirm email'confirmation.key %}" method="post">
+            <form method="post" action="{% url 'account_confirm_email' confirmation.key %}" >
                 {% csrf_token %}
                 <button class="btn btn-primary" type="submit">確定</button>
             </form>

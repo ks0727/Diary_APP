@@ -34,6 +34,11 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item"><a href="{% url 'diary:inquiry' %}" class="nav-link{% block active_inquiry %}{% endblock %}">INQUIRY</a></li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="{% url 'diary:diary_list' %}" class="nav-link {% block 'active_diary_list' %}{% endblock %}"></a>
+                        </li>
+                        {% endif %}
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         {% if user.is_authenticated %}
