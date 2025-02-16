@@ -49,5 +49,20 @@
                 "DJANGO_SETTINGS_MODULE":"diary_app.settings_dev"
             }
         },
+        {
+            "name":"backup_diary",
+            "type":"debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args":[
+                "backup_diary"
+            ],
+            "django":true,
+            "env":{
+                "DB_USER":"postgres",
+                "DB_PASSWORD":"Kusk3924",
+                "DJANGO_SETTINGS_MODULE":"private_diary.settins_dev"
+            }
+        }
     ]
 }
