@@ -71,5 +71,7 @@
     <div class="col-9">
         {{ object.updated_at }}
     </div>
+        <a href="{% url 'diary:diary_update' object.pk %}" class="btn btn-success mt-5 mb-3">編集</a>
 </div>
+
 {% endblock %}
